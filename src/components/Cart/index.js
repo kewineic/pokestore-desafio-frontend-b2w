@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { usePurchased } from '../../context/Purchased';
 import { useModal } from '../../context/Modal';
 import './style.css';
