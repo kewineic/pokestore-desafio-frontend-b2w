@@ -1,3 +1,8 @@
+# PokeStore 
+
+<img align="center" src="https://emojis.slackmojis.com/emojis/images/1450458394/182/pikachu.gif?1450458394" width="130" height="130" /> 
+
+https://emojis.slackmojis.com/emojis/images/1472722300/1128/poke_pika_wink.png?1472722300
 
 ## Assista ao vídeo de demonstração: <br>
 [![Vídeo de demonstração PokeStore: Desafio Loja Pokemon.](http://img.youtube.com/vi/Q1sWkCV0rdk/0.jpg)](http://www.youtube.com/watch?v=Q1sWkCV0rdk "Vídeo de demonstração PokeStore: Desafio Loja Pokemon.")
