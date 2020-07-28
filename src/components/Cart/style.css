@@ -1,0 +1,117 @@
+.cart-container{
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+
+    margin: 75px auto auto auto;
+    width: 30%;
+    height: auto;
+    top: 0;
+    bottom: 50%;
+    right: 3%;
+    z-index: 1; 
+
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.cart-title{
+    width: 100%;
+    height: 2rem;
+
+    background: rgba(0, 0, 0, .8);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-title p{
+    color: #fff;
+}
+
+.cart-main{
+    width: 100%;
+    height: 100%;
+
+    overflow:auto; 
+}
+
+.cart-main ul{
+    width: 100%;
+   
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-main li{
+    width: 100%;
+    min-width: 210px;
+    height: auto;
+
+    list-style: none;
+    border-bottom: 1px solid black;
+
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr;
+}
+
+.cart-pokeName{
+    text-transform: capitalize;   
+}
+
+.cart-main li button{
+    border: none;
+    width: 100%;
+}
+
+.cart-main li button:hover{
+    cursor: pointer;
+    background: rgb(158, 157, 157);
+    color: #fff;
+}
+
+.cart-main li button:active{
+    background-color: rgba(0,0,0,.8);
+    color: #fff;
+}
+
+.cart-main li p{
+    margin: auto;
+}
+
+.total-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    height: 32px;
+    padding: 0 5px 0 10px;
+
+    background: rgba(0,0,0,.8);
+    color: #fff;
+}
+
+.cart-footer button{
+    width: 100%;
+    height: 32px;
+
+    border: none;
+    
+    font-size: 16px;
+    text-transform: uppercase;
+
+    color: #fff;
+  
+    text-align: center;
+}
+
+.cart-footer button:hover{
+    text-shadow: 0 0 3px #fff ;
+    cursor: pointer;
+}
+
+
+

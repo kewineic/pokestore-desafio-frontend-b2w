@@ -1,0 +1,104 @@
+.main-container{
+    display: block;
+    
+    width: 95%;
+    height: auto;
+
+    border-radius: 10px;
+    margin: 75px auto 51px auto;
+}
+
+.main-container ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    padding-bottom: 5px;
+    
+    background: rgba(0,0,0,0);
+}
+
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background: #fff;
+    list-style: none;
+    border: 1px solid black;   
+
+   
+
+}
+
+.card span{
+    width: 100%;
+    height: 85%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+
+    background: rgba(0, 0, 0, .3);
+    color: #fff;
+
+    text-shadow: 0 0 3px #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.card img{
+    max-width: 96px;
+    max-height: 96px;
+}
+
+.poke-name, .poke-price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 50%;
+    min-width: 90px;
+
+    color: #fff;
+    font-weight: 600;
+}
+
+.poke-name{
+    border-radius: 0 0 10px 10px;
+    background: rgba(0, 0, 0, .7);
+
+    text-transform: capitalize;
+
+    min-height: 51px;
+}
+
+.poke-price{
+    background: rgba(0, 0, 0,.7);
+    margin-top: 2.5px;
+    border-radius: 5px;
+}
+
+.card button{
+    color: #fff;
+    border: none;
+    
+    padding: 3px;
+    margin: 2.5px 0 0 0;
+    width: 100%;
+}
+
+.card button:hover{
+    text-shadow: 0 0 3px #fff ;
+    cursor: pointer;
+}
+
+.buy-button{
+    text-transform: uppercase;
+    font-size: 16px;
+}

@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,600;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+    justify-items: center;
+    margin: auto;
+
+    width: 100vw;
+    
+    max-width: 1500px;
+}
+
+.cart-mobile{
+    display: none;
+}
+
+
+/* ------------------ MOBILE MEDIA ---------------------- */
+
+@media only screen and (max-width: 770px) {
+    /* pages */
+    .main{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-items: center;
+        justify-content: center;
+        max-width: 400px; 
+    }
+
+    /* catalog component */
+    .main-container{
+        margin-left: 0;
+        margin-top: 100px;
+    }
+
+    .main-container ul{
+        grid-template-columns: 1fr 1fr 1fr; 
+
+    }
+    
+    /* Cart component */
+    .cart-container{
+        display: none;
+        position: fixed;
+        margin: 110px auto auto auto;
+        width: 90%;
+        height: 200px;
+        bottom: 70%;
+        right: 0;
+        left: 0;   
+    }
+
+     /* Cart component Mobile*/
+     .cartMobile-default{
+        display: block;
+    }
+
+    #hidden-cart:checked ~ .cart-container{
+        display: flex;
+    }
+
+    #hidden-cart:checked ~ * .cartMobile-container label{
+        text-shadow: 0 0 3px #fff;
+    }
+
+    /* footer component */
+    .footer-default{
+        display: none;
+    }
+
+     /* header component */
+    .header-container{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+        width: 90%;    
+    }
+
+    .logo-pokestore-redirect{
+        display: none;
+    }
+
+    .logo-pokestore{
+        display: none;
+    }
+
+    .search-container{
+        width: 90%;
+    }
+
+    .trade-button{
+        width: 20px;
+       
+        background: none;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        border: none;
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .trade-icon{
+        width: 20px;
+    }
+
+}
+

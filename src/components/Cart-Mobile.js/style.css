@@ -1,0 +1,45 @@
+.cartMobile-default{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 98%;
+    margin: 52px auto 0 auto;
+    left: 0;
+    right: 0;
+
+    border-radius: 0 0px 10px 10px;
+    background: rgba(0, 0, 0, .8);
+}
+
+.cartMobile-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    color: #fff;
+}
+
+.cartMobile-container label{
+    border-radius: 0 0 10px 10px;
+    border: none;
+
+    font-size: 16px;
+
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    margin: 0 5px 5px 5px;
+    width: 25%;
+}
+
+.cartMobile-container label:hover{
+    text-shadow: 0 0 3px #fff;
+    cursor: pointer;
+    
+}
+
+
