@@ -16,7 +16,8 @@ Desafio para a vaga de Front End Jr proposto pela B2W Digital.
 - 2 lojas com estilos e tipos diferentes de Pokémon;
 - Barra de busca para filtrar os Pokémon;
 - Botão de finalizar compra, reiniciando o processo de compra;
-- Modal de obrigado ao finalizar compra.
+- Modal de obrigado ao finalizar compra;
+- Salvar os dados da compra do usuário localmente para não perdê-las ao atualizar a página.
 
 ### Stack:
 - HTML5
