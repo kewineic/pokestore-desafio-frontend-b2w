@@ -25,8 +25,8 @@ const HomeFire = () => {
             />
 
             <main className="main">
-                <Catalog colorThemeCatalog="#CC0000" pokeUrl="https://pokeapi.co/api/v2/type/10/" />
-                <Cart colorThemeCart="#CC0000" />
+                <Catalog colorThemeCatalog="#CC0000" pokeUrl="https://pokeapi.co/api/v2/type/10/"  storageKey="Fire"/>
+                <Cart colorThemeCart="#CC0000" storageKey="Fire"/>
             </main>
 
             <Footer colorThemeFooter="#CC0000" />

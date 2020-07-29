@@ -8,14 +8,14 @@ const CartMobile = (props) => {
     const { purchased } = usePurchased(0);
     const { priceTotal } = usePurchased(0);
 
-    const colorThemeCartMobile = props.colorThemeCartMobile
+    const colorThemeCartMobile = props.colorThemeCartMobile;
 
     return (
         <div className="cartMobile-default">
             <div className="cartMobile-container">
                 <p>Quantidade: {purchased.length}</p>
                 <p>Valor Total: ${priceTotal} </p>
-                <label for="hidden-cart" style={{ background: colorThemeCartMobile }}>
+                <label htmlFor="hidden-cart" style={{ background: colorThemeCartMobile }}>
                     <img alt="CartMobile Icon" src={cartIcon} />Detalhes
                 </label>
             </div>

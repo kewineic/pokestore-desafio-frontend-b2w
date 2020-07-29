@@ -26,8 +26,8 @@ const HomeWater = () => {
             />
 
             <main className="main">
-                <Catalog colorThemeCatalog="#3B4CCA" pokeUrl="https://pokeapi.co/api/v2/type/11/" />
-                <Cart colorThemeCart="#3B4CCA" />
+                <Catalog colorThemeCatalog="#3B4CCA" pokeUrl="https://pokeapi.co/api/v2/type/11/" storageKey="Water"/>
+                <Cart colorThemeCart="#3B4CCA" storageKey="Water"/>
             </main>
             <Footer colorThemeFooter="#3B4CCA" />
 
