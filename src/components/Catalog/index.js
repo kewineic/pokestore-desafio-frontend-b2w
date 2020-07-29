@@ -7,15 +7,28 @@ import './styles.css';
 const Catalog = (props) => {
     const colorThemeCatalog = props.colorThemeCatalog;
     const pokeUrl = props.pokeUrl;
+    const storageKey = props.storageKey;
+
     const { pokemon, setPokemon } = usePurchased();
     const { search } = useSearch({ search: "" });
     const [loading, setLoading] = useState(false);
 
     useEffect(async () => {
-        setLoading(true);
-        const data = await getPokemon(pokeUrl);
 
-        setPokemon(data);
+        setLoading(true);
+
+        const dataApi = await getPokemon(pokeUrl);
+        const dataStorage = JSON.parse(localStorage.getItem(`pokePurchased${storageKey}`));
+
+        if(dataStorage && dataStorage.length > 0){
+            const pokePurchased = dataApi.map( api => {
+                let replace = dataStorage.find(storage => storage.pokemon.id === api.pokemon.id )
+                return replace ? replace : api
+            });
+
+            setPokemon(pokePurchased);
+        }else setPokemon(dataApi);
+
         setLoading(false);
     }, []);
 
@@ -31,6 +44,12 @@ const Catalog = (props) => {
                 }
             } : poke
         });
+
+        const pokemonPurchased = newPokemon.filter(poke => {
+            if (poke.pokemon.purchased) return poke.pokemon
+        })
+
+        localStorage.setItem(`pokePurchased${storageKey}`, JSON.stringify(pokemonPurchased));
 
         setPokemon(newPokemon);
     };
@@ -49,8 +68,12 @@ const Catalog = (props) => {
                         <img src={poke.pokemon.img} alt="Imagem pokemon" />
                         <p className="poke-name">{poke.pokemon.name}</p>
                         <p className="poke-price"> ${poke.pokemon.price}</p>
-                        <button onClick={() => buyPokemon(poke.pokemon.id)} className="buy-button" style={{ background: colorThemeCatalog }}>
-                            {poke.pokemon.purchased && "Remover"} {!poke.pokemon.purchased && "Comprar"}
+                        <button onClick={() => buyPokemon(poke.pokemon.id) }
+                            className="buy-button"
+                            style={{ background: colorThemeCatalog }}
+                        >
+                            {!poke.pokemon.purchased && "Comprar"}
+                            {poke.pokemon.purchased && "Remover"}
                         </button>
                     </li>
                 )}

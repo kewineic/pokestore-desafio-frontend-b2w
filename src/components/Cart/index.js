@@ -5,11 +5,12 @@ import './style.css';
 
 const Cart = (props) => {
     const colorThemeCart = props.colorThemeCart;
+    const storageKey = props.storageKey;
+
     const { pokemon, setPokemon } = usePurchased();
     const { setIsModalVisible } = useModal(false);
-    const { purchased, setPurchased } = usePurchased([]);
+    const { purchased, setPurchased } = usePurchased();
     const { priceTotal, setPriceTotal } = usePurchased(0);
-
 
     useEffect(() => {
         const filtered = pokemon.filter(poke =>
@@ -17,16 +18,17 @@ const Cart = (props) => {
         );
 
         setPurchased(filtered);
-    }, [pokemon]);
+    }, ([pokemon]));
 
     useEffect(() => {
         let convert = purchased.map(num =>
             Number(num.pokemon.price)
         );
+
         let total = convert.reduce((a, b) => a + b, 0);
 
         setPriceTotal(total.toFixed(2));
-    }, [purchased]);
+    }, ([purchased]));
 
     const removePurchasedCart = (id) => {
         const removePokemon = pokemon.map(poke => {
@@ -47,7 +49,7 @@ const Cart = (props) => {
     const checkOut = () => {
         const removePokemon = pokemon.map(poke => {
             return {
-                ...poke, pokemon: {
+                pokemon: {
                     purchased: false,
                     id: poke.pokemon.id,
                     name: poke.pokemon.name,
@@ -57,13 +59,12 @@ const Cart = (props) => {
             }
         });
 
+        if (purchased.length) localStorage.clear(`pokePurchased${storageKey}`);
         setPokemon(removePokemon);
     }
 
     const openModal = () => {
         if (purchased.length) setIsModalVisible(true)
-
-
     }
 
     return (
