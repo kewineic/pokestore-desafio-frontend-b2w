@@ -1,13 +1,16 @@
 # PokeStore 
 
+### [Aplicativo no Heroku](https://pokestore-desafio-b2w.herokuapp.com/)
+
 <img align="center" src="https://emojis.slackmojis.com/emojis/images/1450458394/182/pikachu.gif?1450458394" width="130" height="130" /> 
+
+<a href="https://pokestore-desafio-b2w.herokuapp.com/"> </a>
 
 ## Assista ao vídeo de demonstração: <br>
 [![Vídeo de demonstração PokeStore: Desafio Loja Pokemon.](http://img.youtube.com/vi/Q1sWkCV0rdk/0.jpg)](http://www.youtube.com/watch?v=Q1sWkCV0rdk "Vídeo de demonstração PokeStore: Desafio Loja Pokemon.")
 
 ## Resumo:
 Desafio para a vaga de Front End Jr proposto pela B2W Digital.
-
 
 ### Funcionalidades:
 - Catálogo de produtos;
@@ -39,7 +42,7 @@ Desafio para a vaga de Front End Jr proposto pela B2W Digital.
 #### Scripts: 
 - "start": "react-scripts start",
 - "build": "react-scripts build",
-- "test": "react-scripts test",
+- "test": "react-scripts test",qqqqqqqqqqqqqqqq
 - "eject": "react-scripts eject"
 
 <BR>
