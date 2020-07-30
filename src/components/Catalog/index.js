@@ -61,7 +61,7 @@ const Catalog = (props) => {
 
     return (
         <div className="main-container">
-            {loading && <h2>Carregando...</h2>}
+            {loading && <div className="loading-anim"></div>}
             <ul>
                 {filterPokemon.map(poke =>
                     <li className="card" key={poke.pokemon.id}>
