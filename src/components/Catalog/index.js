@@ -12,7 +12,8 @@ const Catalog = (props) => {
     const { pokemon, setPokemon } = usePurchased();
     const { search } = useSearch({ search: "" });
     const [loading, setLoading] = useState(false);
-
+    
+    /* eslint-disable */
     useEffect(async () => {
 
         setLoading(true);
@@ -46,7 +47,7 @@ const Catalog = (props) => {
         });
 
         const pokemonPurchased = newPokemon.filter(poke => {
-            if (poke.pokemon.purchased) return poke.pokemon
+             return poke.pokemon.purchased ? poke.pokemon : undefined
         })
 
         localStorage.setItem(`pokePurchased${storageKey}`, JSON.stringify(pokemonPurchased));
