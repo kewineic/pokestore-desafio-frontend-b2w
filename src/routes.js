@@ -9,8 +9,8 @@ export default function Routes() {
         <BrowserRouter>
             <Switch>
                 <Route path="/" exact component={Home} />
-                <Route path="/fire" exact component={HomeFire} />
-                <Route path="/water" exact component={HomeWater} />
+                <Route path="/fire" component={HomeFire} />
+                <Route path="/water" component={HomeWater} />
             </Switch>
         </BrowserRouter>
     );
