@@ -1,8 +1,8 @@
 # PokeStore 
 
-### [Aplicativo no Heroku](https://pokestore-desafio-b2w.herokuapp.com/)
-
 <img align="center" src="https://emojis.slackmojis.com/emojis/images/1450458394/182/pikachu.gif?1450458394" width="130" height="130" /> 
+
+### [Aplicativo no Heroku](https://pokestore-desafio-b2w.herokuapp.com/)
 
 <a href="https://pokestore-desafio-b2w.herokuapp.com/"> </a>
 
