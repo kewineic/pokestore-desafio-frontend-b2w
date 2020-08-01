@@ -80,6 +80,7 @@ const Cart = (props) => {
                     <ul>
                         {purchased.map(poke =>
                             <li key={poke.pokemon.id}>
+                                <img className="cart-pokeImg" src={poke.pokemon.img} alt={` Mini icone do ${poke.pokemon.name}`}></img>
                                 <p className="cart-pokeName">{poke.pokemon.name}</p>
                                 <p>${poke.pokemon.price}</p>
                                 <button onClick={() => removePurchasedCart(poke.pokemon.id)}>Remover</button>
